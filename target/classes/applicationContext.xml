@@ -12,4 +12,8 @@
         <constructor-arg value="Kostya"/>
     </bean>
 
+    <bean id="musicBean"
+          class="ru.spring.demo.RockMusic">
+    </bean>
+
 </beans>

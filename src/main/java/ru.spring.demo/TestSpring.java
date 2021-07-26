@@ -1,6 +1,5 @@
 package ru.spring.demo;
 
-import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,6 +11,10 @@ public class TestSpring {
 
         TestBean testBean = context.getBean("testBean", TestBean.class);
         System.out.println(testBean.getName());
+
+        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+        musicPlayer.playMusic();
 
         context.close();
     }

@@ -4,7 +4,6 @@ package ru.spring.demo;
  * todo Document type TestBean
  */
 public class TestBean {
-
     private String name;
 
     public TestBean(String name) {
