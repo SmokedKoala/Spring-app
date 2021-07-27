@@ -7,6 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--для импорта данных из properties-файла-->
     <context:property-placeholder location="musicPlayer.properties"/>
 
 <!--    <bean id="testBean"-->
@@ -19,7 +20,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="ru.spring.demo.MusicPlayer">
+          class="ru.spring.demo.MusicPlayer"
+          scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
