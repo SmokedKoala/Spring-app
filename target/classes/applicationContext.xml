@@ -7,6 +7,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--для объявления директории на поиск классов с аннотацией @Component -->
+    <context:component-scan base-package="ru.spring.demo"/>
+
     <!--для импорта данных из properties-файла-->
     <context:property-placeholder location="musicPlayer.properties"/>
 
@@ -15,19 +18,19 @@
 <!--        <constructor-arg value="Kostya"/>-->
 <!--    </bean>-->
 
-    <bean id="musicBean"
-            class="ru.spring.demo.ClassicalMusic"
-            init-method="myInit"
-            destroy-method="myDestroy"
-            factory-method="getClassicalMusic"
-    >
-    </bean>
+<!--    <bean id="musicBean"-->
+<!--            class="ru.spring.demo.ClassicalMusic"-->
+<!--            init-method="myInit"-->
+<!--            destroy-method="myDestroy"-->
+<!--            factory-method="getClassicalMusic"-->
+<!--    >-->
+<!--    </bean>-->
 
-    <bean id="musicPlayer"
-            class="ru.spring.demo.MusicPlayer"
-            scope="prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+<!--    <bean id="musicPlayer"-->
+<!--            class="ru.spring.demo.MusicPlayer"-->
+<!--            scope="prototype">-->
+<!--        <property name="music" ref="musicBean"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--    </bean>-->
 
 </beans>

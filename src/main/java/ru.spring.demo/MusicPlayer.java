@@ -1,21 +1,35 @@
 package ru.spring.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * todo Document type MusicPlayer
  */
+@Component
 public class MusicPlayer {
-    private Music music;
+
+    private Music music1;
+    private Music music2;
+    @Value("${musicPlayer.volume}")
     private int volume;
 
-    public MusicPlayer(Music music) {
-        this.music = music;
+    @Autowired
+    public MusicPlayer(@Qualifier("rockMusic")Music music1, @Qualifier("classicalMusic")Music music2) {
+        this.music1 = music1;
+        this.music2 = music2;
     }
+
+
+
 
     public MusicPlayer() {
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
+    public void setMusic(Music music1) {
+        this.music1 = music1;
     }
 
     public void setVolume(int volume) {
@@ -27,6 +41,6 @@ public class MusicPlayer {
     }
 
     public void playMusic(){
-        System.out.println("Now playing: "+this.music.getSong()+" with volume: "+this.getVolume());
+        System.out.println("Now playing:\n"+this.music1.getSong()+"\n"+this.music2.getSong()+"\nwith volume: "+this.getVolume());
     }
 }

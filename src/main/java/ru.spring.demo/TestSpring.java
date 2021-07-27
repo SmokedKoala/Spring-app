@@ -18,12 +18,16 @@ public class TestSpring {
 //        MusicPlayer musicPlayer = new MusicPlayer(music);
 
 //        Dependency Injection
-        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
-        musicPlayer.playMusic();
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
+//        musicPlayer.playMusic();
 
 //        Scope
 //        MusicPlayer musicPlayer2 = context.getBean("musicPlayer",MusicPlayer.class);
 //        System.out.println(musicPlayer == musicPlayer2);
+
+//        Аннотации
+        Computer computer = context.getBean("computer", Computer.class);
+        computer.openMusicPlayer();
 
         context.close();
     }
