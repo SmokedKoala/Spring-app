@@ -7,13 +7,21 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ru.spring.demo.TestBean">
-        <constructor-arg value="Kostya"/>
-    </bean>
+    <context:property-placeholder location="musicPlayer.properties"/>
+
+<!--    <bean id="testBean"-->
+<!--          class="ru.spring.demo.TestBean">-->
+<!--        <constructor-arg value="Kostya"/>-->
+<!--    </bean>-->
 
     <bean id="musicBean"
           class="ru.spring.demo.RockMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="ru.spring.demo.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>
