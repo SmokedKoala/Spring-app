@@ -22,8 +22,8 @@ public class TestSpring {
         musicPlayer.playMusic();
 
 //        Scope
-        MusicPlayer musicPlayer2 = context.getBean("musicPlayer",MusicPlayer.class);
-        System.out.println(musicPlayer == musicPlayer2);
+//        MusicPlayer musicPlayer2 = context.getBean("musicPlayer",MusicPlayer.class);
+//        System.out.println(musicPlayer == musicPlayer2);
 
         context.close();
     }

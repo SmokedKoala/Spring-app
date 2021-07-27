@@ -16,12 +16,16 @@
 <!--    </bean>-->
 
     <bean id="musicBean"
-          class="ru.spring.demo.RockMusic">
+            class="ru.spring.demo.ClassicalMusic"
+            init-method="myInit"
+            destroy-method="myDestroy"
+            factory-method="getClassicalMusic"
+    >
     </bean>
 
     <bean id="musicPlayer"
-          class="ru.spring.demo.MusicPlayer"
-          scope="prototype">
+            class="ru.spring.demo.MusicPlayer"
+            scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
