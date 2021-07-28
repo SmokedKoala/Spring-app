@@ -1,4 +1,7 @@
 ru\spring\mvc\controllers\SecondController.class
 ru\spring\mvc\config\SpringConfig.class
+ru\spring\mvc\models\Person.class
 ru\spring\mvc\controllers\FirstController.class
+ru\spring\mvc\DAO\PersonDAO.class
+ru\spring\mvc\controllers\PeopleController.class
 ru\spring\mvc\config\SpringMVCDespatcherServletInitializer.class
