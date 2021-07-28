@@ -1,1 +1,3 @@
+ru\spring\mvc\config\SpringConfig.class
+ru\spring\mvc\config\SpringMVCDespatcherServletInitializer.class
 ru\spring\mvc\HelloController.class
