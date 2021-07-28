@@ -6,11 +6,15 @@ import org.springframework.stereotype.Component;
 /**
  * todo Document type Computer
  */
-@Component
+//@Component
 public class Computer {
     private int id;
-    @Autowired
+//    @Autowired
     private MusicPlayer player;
+
+    public Computer(MusicPlayer musicPlayer) {
+        this.player = musicPlayer;
+    }
 
     public void openMusicPlayer(){
         System.out.println("Computer starts working...");

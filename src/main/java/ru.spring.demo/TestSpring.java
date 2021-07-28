@@ -1,5 +1,6 @@
 package ru.spring.demo;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -7,7 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        XML Configuration
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+//        Java class Configuration
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 
 //        test Spring
 //        TestBean testBean = context.getBean("testBean", TestBean.class);

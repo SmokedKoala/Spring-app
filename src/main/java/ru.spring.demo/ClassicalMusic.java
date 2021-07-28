@@ -8,22 +8,22 @@ import javax.annotation.PreDestroy;
 /**
  * todo Document type ClassicalMusic
  */
-@Component
+//@Component
 public class ClassicalMusic implements Music {
 
 //    Bean LifeStyle
-    @PostConstruct
-    public void myInit(){
-        System.out.println("Testing initialisation method");
-    }
-    @PreDestroy
-    public void myDestroy(){
-        System.out.println("Testing destroy method");
-    }
-    private ClassicalMusic(){}
-    public static ClassicalMusic getClassicalMusic(){
-        return new ClassicalMusic();
-    }
+//    @PostConstruct
+//    public void myInit(){
+//        System.out.println("Testing initialisation method");
+//    }
+//    @PreDestroy
+//    public void myDestroy(){
+//        System.out.println("Testing destroy method");
+//    }
+//    private ClassicalMusic(){}
+//    public static ClassicalMusic getClassicalMusic(){
+//        return new ClassicalMusic();
+//    }
 
     @Override
     public String getSong() {
