@@ -12,13 +12,14 @@ import java.util.List;
 @Component
 public class PersonDAO {
     private List<Person> people;
+    private static int PEOPLE_COUNT;
 
     {
         people = new ArrayList<>();
 
-        people.add(new Person(1, "Tom"));
-        people.add(new Person(2, "Jack"));
-        people.add(new Person(3, "Sam"));
+        people.add(new Person(++ PEOPLE_COUNT, "Tom"));
+        people.add(new Person(++ PEOPLE_COUNT, "Jack"));
+        people.add(new Person(++ PEOPLE_COUNT, "Sam"));
     }
 
     public List<Person> showAll(){
@@ -28,4 +29,12 @@ public class PersonDAO {
     public Person showOne(int id){
         return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
     }
+
+    public void save(Person person){
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
+    }
+
 }
+
+

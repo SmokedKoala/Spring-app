@@ -3,11 +3,9 @@ package ru.spring.mvc.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ru.spring.mvc.DAO.PersonDAO;
+import ru.spring.mvc.models.Person;
 
 /**
  * todo Document type PeopleController
@@ -16,7 +14,7 @@ import ru.spring.mvc.DAO.PersonDAO;
 @RequestMapping("/people")
 public class PeopleController {
 
-    private PersonDAO personDAO;
+    private final PersonDAO personDAO;
 
     @Autowired
     public PeopleController(PersonDAO personDAO) {
@@ -33,5 +31,17 @@ public class PeopleController {
     public String showOne(@PathVariable("id") int id, Model model){
         model.addAttribute("person",personDAO.showOne(id));
         return "people/one";
+    }
+
+    @GetMapping("/new")
+    public String addOne(Model model){
+        model.addAttribute("person", new Person());
+        return "people/new";
+    }
+
+    @PostMapping()
+    public String createOne(@ModelAttribute("person") Person person){
+        personDAO.save(person);
+        return "redirect:/people";
     }
 }

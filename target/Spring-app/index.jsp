@@ -5,5 +5,6 @@
 <p><a href="/goodbye">Goodbye page</a></p>
 <p><a href="/calculator?a=2&b=2&sign=sum">Calculator page</a></p>
 <p><a href="/people">People DB</a></p>
+<p><a href="/people/new">Add person to DB</a></p>
 </body>
 </html>
