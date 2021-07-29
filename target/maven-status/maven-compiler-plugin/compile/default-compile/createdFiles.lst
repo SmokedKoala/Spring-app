@@ -1,7 +1,15 @@
+ru\spring\demo\SpringConfig.class
+ru\spring\mvc\config\MySpringMvcDispatcherSerlvetIntitializer.class
 ru\spring\mvc\controllers\SecondController.class
+ru\spring\demo\RockMusic.class
+ru\spring\demo\MusicPlayer.class
+ru\spring\demo\Music.class
 ru\spring\mvc\config\SpringConfig.class
+ru\spring\demo\TestSpring.class
 ru\spring\mvc\models\Person.class
 ru\spring\mvc\controllers\FirstController.class
 ru\spring\mvc\DAO\PersonDAO.class
+ru\spring\demo\Computer.class
 ru\spring\mvc\controllers\PeopleController.class
-ru\spring\mvc\config\SpringMVCDespatcherServletInitializer.class
+ru\spring\demo\TestBean.class
+ru\spring\demo\ClassicalMusic.class
