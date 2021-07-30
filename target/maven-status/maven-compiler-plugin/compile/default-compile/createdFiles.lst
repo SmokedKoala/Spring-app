@@ -10,6 +10,7 @@ ru\spring\mvc\models\Person.class
 ru\spring\mvc\controllers\FirstController.class
 ru\spring\mvc\DAO\PersonDAO.class
 ru\spring\demo\Computer.class
+ru\spring\mvc\DAO\PersonMapper.class
 ru\spring\mvc\controllers\PeopleController.class
 ru\spring\demo\TestBean.class
 ru\spring\demo\ClassicalMusic.class
